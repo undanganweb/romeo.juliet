@@ -1,0 +1,280 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+@font-face {
+  font-family: Alex-Brush;
+  src: url(/AlexBrush-Regular.ttf);
+}
+@font-face {
+  font-family: belligent;
+  src: url(/belligerent.ttf);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 48px;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.header {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  background: linear-gradient(60deg, rgb(67, 92, 204) 0%, skyblue 100%);
+  color: white;
+}
+.logo {
+  width: 50px;
+  fill: white;
+  padding-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  height: 65vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+
+.salam {
+  font-weight: bold;
+  margin: 0;
+  font-family: Alex-Brush;
+  font-size: 30px;
+}
+.salam2 {
+  color: white;
+  margin-top: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.kenal h2 {
+  font-family: Alex-Brush;
+  font-size: 35px;
+}
+.cwo img {
+  width: 40%;
+  height: 40%;
+  margin: 10px;
+}
+.cwo {
+  color: black;
+}
+section {
+  color: black;
+  background-image: linear-gradient(skyblue, white);
+}
+.grid img {
+  width: 45%;
+  margin: 5px;
+  border: 2px solid black;
+  height: 50%;
+}
+.head h2 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+}
+.full {
+  background-image: url(/background.png);
+  padding: 20px;
+}
+.full h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.overlay {
+  position: fixed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 999;
+  transition: 0.8s;
+  text-align: center;
+  padding: 20% 0 20% 0;
+}
+.overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+.overlay img {
+  width: 80%;
+  height: 75%;
+  margin-top: 10%;
+}
+.icon {
+  z-index: 9999;
+}
+.overlay:target img {
+  animation: zoom 1s;
+}
+.overlay .close {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 99;
+  transition: 0.8s;
+  text-align: center;
+  padding: 20% 0 20% 0;
+}
+.akad {
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
+  margin: 30px;
+  background-color: rgb(255, 255, 255);
+  opacity: 77%;
+}
+.head p {
+  font-size: medium;
+  font-family: Alex-Brush;
+}
+.jadwal h2 {
+  font-weight: bolder;
+  font-family: Alex-Brush;
+  font-size: 40px;
+}
+.jadwal p {
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+}
+.jadwal img {
+  width: 60%;
+  height: 60%;
+}
+.jadwal a {
+  text-decoration: none;
+}
+.amplop img {
+  width: 30%;
+  height: 30%;
+}
+.amplop :nth-last-child(2) img {
+  width: 20%;
+  height: 20%;
+}
+.amplop h4 {
+  font-family: belligent;
+}
+hr {
+  border: 1px solid black;
+  font-weight: bold;
+}
+footer {
+  width: 100%;
+  background-color: rgb(135, 167, 235);
+}
+.footer img {
+  width: 10%;
+  height: 10%;
+  margin: 0 5px 10px 5px;
+}
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 680px) {
+  .overlay img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .overlay {
+    padding: 0px 0 20px 0;
+  }
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
